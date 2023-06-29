@@ -1,0 +1,44 @@
+<p>Editar-producto!</p>
+<div class="card">
+  <div class="card-header">Editar Producto</div>
+  <div class="card-body">
+    <form (ngSubmit)="updateProductos()">
+      <div class="mb-3">
+        <label for="Nombre" class="form-label">Nombre</label>
+        <input
+          type="text"
+          name="Nombre"
+          class="form-control"
+          [(ngModel)]="producto.Nombre"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="Descipcion" class="form-label">Descripción</label>
+        <input
+          type="text"
+          name="Descripcion"
+          class="form-control"
+          [(ngModel)]="producto.Descripcion"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="Foto" class="form-label">Foto</label>
+        <input
+        
+          type="file"
+          name="Foto"
+          class="form-control"
+          [(ngModel)]="producto.Foto"
+        />
+      </div>
+      <br />
+
+      <input class="btn btn-success" type="submit" value="Actualizar" />
+
+      <a class="btn btn-primary" href="#" id="">Cancelar</a>
+    </form>
+  </div>
+</div>

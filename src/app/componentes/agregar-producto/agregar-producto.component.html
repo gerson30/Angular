@@ -1,0 +1,46 @@
+<p>agregar-producto works!</p>
+
+<div class="card">
+  <div class="card-header">Agregar Producto</div>
+  <div class="card-body">
+    <form (ngSubmit)="addData()">
+      <div class="mb-3">
+        <label for="Nombre" class="form-label">Nombre</label>
+        <input
+          type="text"
+          name="Nombre"
+          class="form-control"
+          placeholder="Escribe el nombre de un producto"
+          [(ngModel)]="producto.Nombre"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="Descipcion" class="form-label">Descripción</label>
+        <textarea
+          type="text"
+          name="Descripcion"
+          class="form-control"
+          placeholder="Indica la descripción del producto"
+          [(ngModel)]="producto.Descripcion"
+        ></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="Foto" class="form-label">Foto</label>
+        <input
+          type="file"
+          name="Foto"
+          class="form-control"
+          [(ngModel)]="producto.Foto"
+        />
+      </div>
+      <br />
+
+      <input class="btn btn-success" type="submit" value="Agregar" />
+
+      <a class="btn btn-primary" href="#" id="">Cancelar</a>
+    </form>
+  </div>
+</div>
